@@ -10,7 +10,7 @@ var registerEvent = register.myUser();
 $("#button1").click(function(){
     $("#loader").show();
     register.registerUser(
-        $("#fNome").val(),$("#fIdade").val(),$("fCPF").val(),$("#fCargo").val(),$("#fHash").val(),function(error,result){
+        $("#fNome").val(),$("#fIdade").val(),$("#fCPF").val(),$("#fCargo").val(),$("#fHash").val(),function(error,result){
             if(!error){
                 console.log("ok");
                 $("#loader").hide();
@@ -28,17 +28,4 @@ $("#button1").click(function(){
             }
         }
     )
-});
-
-
-$("#button2").click(function(){
-
-    register.getUser($("#fID").val(),function(error,result){
-        if(!error){
-            $("#instructor").html(result);
-            console.log(result);
-        }
-        else 
-            console.error(error);
-    });
 });
