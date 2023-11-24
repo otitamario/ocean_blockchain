@@ -29,3 +29,16 @@ $("#button1").click(function(){
         }
     )
 });
+
+
+$("#button2").click(function(){
+
+    register.getUser($("#fID").val(),function(error,result){
+        if(!error){
+            $("#instructor").html(result);
+            console.log(result);
+        }
+        else 
+            console.error(error);
+    });
+});
